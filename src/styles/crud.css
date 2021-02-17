@@ -3,9 +3,38 @@
 body{
     user-drag: none; 
     user-select: none;
-    transition: 0.5s;
+    transition: 1s;
     }
 
 #main{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    width: 95%;
+    }
 
-}
+#top{
+    margin-top: 50px;
+    }
+
+#bottom{
+    margin-top: 20px;
+    }
+
+#table{
+    width: 45%;
+    text-align: center;
+    }
+
+#buttons{
+    width: 45%;
+    text-align: center;
+    }
+
+#bottons:img {
+    margin-bottom: 20px;
+    }
+
+
+
+
