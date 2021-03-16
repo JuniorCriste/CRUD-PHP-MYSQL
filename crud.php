@@ -5,7 +5,7 @@
 <link href="src/styles/crud.css" rel="stylesheet">
 <meta charset="UTF-8">
 <meta content='width=device-width, minimum-scale=1.0, maximum-scale=1.0' name='viewport'/>
-<link rel="shortcut icon" type="image/png" href="img/icon.png"/>
+<link rel="icon" type="image/png" href="https://informaticode.store/mais/crud/img/icon.png"/>
 
 </head>
 <body>
@@ -19,7 +19,7 @@
     </div>
 
 <div id="buttons">
-    <img src="img/structure/bntadd.png"> <br /> <br />
+    <a href="src/add.php"><img src="img/structure/bntadd.png"> </a> <br /> <br />
     <img src="img/structure/bntsec.png"> <br /> <br />
     <img src="img/structure/bntmod.png"> <br /> <br />
     <img src="img/structure/bntdel.png"> 
