@@ -1,6 +1,9 @@
 <?php
 session_start();
 include_once("conecta.php");
+
+$buscarcad = "SELECT * FROM tbt_crud";
+$querycad = msqli_query($conn, $buscarcad);
 ?>
 
 <DOCTYPE html>
@@ -22,30 +25,27 @@ include_once("conecta.php");
 <div id="table">
     <img src="img/structure/basetb.png">
     
-<div id="view">
-<?php
+<div id="tbtview">
+    <?php
+    while($recebercad = mysqli_fetch_array($querycad)){
 
-$buscarcad = "SELECT * FROM tbt_crud";
-$queryCad = msqli_query($conn, $buscarcad);
+        $id = $recebercad['id'];
+        $nome = $recebercad['nome'];
+        $sobrenome = $recebercad['sobrenome'];
+        $email = $recebercad['email'];
+        $celular = $recebercad['celular'];
+    ?>
 
-while($recebercad = mysqli_fetch_array($querycad)){
+    <tr>
+        <td scope="row"><?php echo $id; ?> </td>
+        <td><?php echo $nome; ?> </td>
+        <td><?php echo $sobrenome; ?> </td>
+        <td><?php echo $email; ?> </td>
+        <td><?php echo $celular; ?> </td>
+    </tr>
 
-$id = $recebercad['id'];
-$nome = $recebercad['nome'];
-$sobrenome = $recebercad['sobrenome'];
-$email = $recebercad['email'];
-$celular = $recebercad['celular'];
-?>
-
-<tr>
-<td scope="row"><?php echo $id;?> </td>
-<td><?php echo $nome;?> </td>
-<td><?php echo $sobrenome;?> </td>
-<td><?php echo $email;?> </td>
-<td><?php echo $celular;?> </td>
-
-</tr>
 <?php }; ?>
+
 </div>
 
 
