@@ -1,9 +1,6 @@
 <?php
 session_start();
 include_once("conecta.php");
-
-$buscarcad = "SELECT * FROM tbt_crud";
-$querycad = msqli_query($conn, $buscarcad);
 ?>
 
 <DOCTYPE html>
@@ -27,8 +24,14 @@ $querycad = msqli_query($conn, $buscarcad);
     
 <div id="tbtview">
     <?php
-    while($recebercad = mysqli_fetch_array($querycad)){
+        $buscarcad = "SELECT * FROM tbt_crud";
+        $querycad = msqli_query($conn, $buscarcad);
 
+    ?>
+
+    <?php
+    while($recebercad = mysqli_fetch_array($querycad))
+    {
         $id = $recebercad['id'];
         $nome = $recebercad['nome'];
         $sobrenome = $recebercad['sobrenome'];
@@ -37,7 +40,7 @@ $querycad = msqli_query($conn, $buscarcad);
     ?>
 
     <tr>
-        <td scope="row"><?php echo $id; ?> </td>
+        <td scope="row"> <?php echo $id; ?> </td>
         <td><?php echo $nome; ?> </td>
         <td><?php echo $sobrenome; ?> </td>
         <td><?php echo $email; ?> </td>
