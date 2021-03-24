@@ -1,3 +1,8 @@
+<?php
+session_start();
+include_once("conecta.php");
+?>
+
 <DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,7 +21,21 @@
 <div id="main">
 <div id="table">
     <img src="img/structure/basetb.png">
-    </div>
+    
+<div id="view">
+<?php
+
+$buscarcad = "SELECT * FROM tbt_crud";
+$queryCad = msqli_query($conn, $buscarcad);
+
+
+?>
+</div>
+
+
+
+</div>
+
 
 <div id="buttons">
     <a href="src/add.php"><img src="img/structure/bntadd.png"> </a> <br /> <br />
