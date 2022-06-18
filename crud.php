@@ -21,15 +21,11 @@ include_once("conecta.php");
 <div id="main">
 <div id="table">
     <img src="img/structure/basetb.png">
-    
-<div id="tbtview">
-    <?php
+<br/>    
+   <?php
         $buscarcad = "SELECT * FROM tbt_crud";
         $querycad = msqli_query($conn, $buscarcad);
 
-    ?>
-
-    <?php
     while($recebercad = mysqli_fetch_array($querycad))
     {
         $id = $recebercad['id'];
@@ -41,16 +37,13 @@ include_once("conecta.php");
 
     <tr>
         <td scope="row"> <?php echo $id; ?> </td>
-        <td><?php echo $nome; ?> </td>
-        <td><?php echo $sobrenome; ?> </td>
-        <td><?php echo $email; ?> </td>
-        <td><?php echo $celular; ?> </td>
+        <td> <?php echo $nome; ?> </td>
+        <td> <?php echo $sobrenome; ?> </td>
+        <td> <?php echo $email; ?> </td>
+        <td> <?php echo $celular; ?> </td>
     </tr>
 
 <?php }; ?>
-
-</div>
-
 
 
 </div>
