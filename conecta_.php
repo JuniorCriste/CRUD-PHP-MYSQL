@@ -1,4 +1,4 @@
-//Esse arquivo originalmente tem o nome "conecta.php" e é preenchido com dados de segredo nos campos abaixos. 
+//Esse arquivo originalmente tem o nome "conecta.php", caminho "database/conecta.php" e é preenchido com dados de segredo nos campos abaixos. 
 
 <?php
 
