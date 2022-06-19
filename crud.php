@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("conecta.php");
+include_once("/database/conecta.php");
 ?>
 
 <DOCTYPE html>
