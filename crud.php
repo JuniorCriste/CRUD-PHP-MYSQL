@@ -1,6 +1,8 @@
 <?php
-session_start();
-include_once("/database/conecta.php");
+//session_start();
+include '/database/conecta.php';
+$buscar_cadastros = "SELECT * FROM crud";
+$query_cadastros = mysqli_query($conn, $buscar_cadastros);
 ?>
 
 <DOCTYPE html>
