@@ -16,21 +16,21 @@ echo "Celular é: $celular <br>";
 
 
 
-$ExisteEmail = "select email from tbt_crud where email = '{$email}'";
+$ExisteEmail = "select email from crud where email = '{$email}'";
 
-$resultEE = mysqli_query($conn, $ExisteEmail);
+$resultEE = mysqli_query($conx, $ExisteEmail);
 
 $rowEE = mysqli_num_rows($resultEE);
 
-$result_usuario = "INSERT INTO tbt_crud (nome, sobrenome, email, celular) VALUES ('$nome', '$sobrenome', '$email', '$celular')";
+$result_usuario = "INSERT INTO crud (nome, sobrenome, email, celular) VALUES ('$nome', '$sobrenome', '$email', '$celular')";
 
-/*$resultEE = mysqli_query($conn, $result_usuario);*/
+/*$resultEE = mysqli_query($conx, $result_usuario);*/
 
 
 
 
 if($rowEE == 0) {
-    $resultado_usuario = mysqli_query($conn, $result_usuario);
+    $resultado_usuario = mysqli_query($conx, $result_usuario);
     $_SESSION['recado'] = "<p style='color: green;'>Cadastrado! Agora Faça seu login...</p>";    
     header('Location: ../crud.php'); 
 
