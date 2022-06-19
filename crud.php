@@ -25,16 +25,13 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     <img src="img/structure/basetb.png">
 <br/>    
    <?php
-        $buscarcad = "SELECT * FROM tbt_crud";
-        $querycad = msqli_query($conn, $buscarcad);
-
-    while($recebercad = mysqli_fetch_array($querycad))
+    while($cadastros = mysqli_fetch_array($query_cadastros))
     {
-        $id = $recebercad['id'];
-        $nome = $recebercad['nome'];
-        $sobrenome = $recebercad['sobrenome'];
-        $email = $recebercad['email'];
-        $celular = $recebercad['celular'];
+        $id = $cadastros['id'];
+        $nome = $cadastros['nome'];
+        $sobrenome = $cadastros['sobrenome'];
+        $email = $cadastros['email'];
+        $celular = $cadastros['celular'];
     ?>
 
     <tr>
@@ -45,7 +42,6 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
         <td> <?php echo $celular; ?> </td>
     </tr>
 
-<?php }; ?>
 
 
 </div>
