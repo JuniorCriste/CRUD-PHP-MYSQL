@@ -24,25 +24,25 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 <div id="table">
     <img src="img/structure/basetb.png">
 <br/>    
-   <?php
-    while($cadastros = mysqli_fetch_array($query_cadastros))
-    {
-        $id = $cadastros['id'];
-        $nome = $cadastros['nome'];
-        $sobrenome = $cadastros['sobrenome'];
-        $email = $cadastros['email'];
-        $celular = $cadastros['celular'];
-    ?>
+       <?php
+            while($cadastros = mysqli_fetch_array($query_cadastros))
+            {
+                $id = $cadastros['id'];
+                $nome = $cadastros['nome'];
+                $sobrenome = $cadastros['sobrenome'];
+                $email = $cadastros['email'];
+                $celular = $cadastros['celular'];
+            ?>
 
-    <tr>
-        <td scope="row"> <?php echo $id; ?> </td>
-        <td> <?php echo $nome; ?> </td>
-        <td> <?php echo $sobrenome; ?> </td>
-        <td> <?php echo $email; ?> </td>
-        <td> <?php echo $celular; ?> </td>
-    </tr>
+            <tr>
+                <td scope="row"> <?php echo $id; ?> </td>
+                <td> <?php echo $nome; ?> </td>
+                <td> <?php echo $sobrenome; ?> </td>
+                <td> <?php echo $email; ?> </td>
+                <td> <?php echo $celular; ?> </td>
+            </tr>
 
-<?php }; ?>
+        <?php }; ?>
 
 
 </div>
