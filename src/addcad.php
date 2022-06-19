@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("conecta.php");
+include_once("../database/conecta.php");
 
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
     $sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
