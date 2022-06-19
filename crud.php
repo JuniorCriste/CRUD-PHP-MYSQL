@@ -2,7 +2,7 @@
 //session_start();
 include '/database/conecta.php';
 $buscar_cadastros = "SELECT * FROM crud";
-$query_cadastros = mysqli_query($conn, $buscar_cadastros);
+$query_cadastros = mysqli_query($conx, $buscar_cadastros);
 ?>
 
 <DOCTYPE html>
@@ -43,7 +43,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     <a href="https://github.com/JuniorCriste/CRUD-PHP-MYSQL" target="_blank"><img src="img/structure/git.png"></a>
     </div>
 
-<table class="table">   
+<table>   
        <?php
             while($cadastros = mysqli_fetch_array($query_cadastros))
             {
