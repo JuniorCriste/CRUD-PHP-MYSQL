@@ -42,6 +42,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
         <td> <?php echo $celular; ?> </td>
     </tr>
 
+<?php }; ?>
 
 
 </div>
