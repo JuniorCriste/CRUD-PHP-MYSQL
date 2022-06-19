@@ -24,7 +24,7 @@ $rowEE = mysqli_num_rows($resultEE);
 
 $result_usuario = "INSERT INTO crud (nome, sobrenome, email, celular) VALUES ('$nome', '$sobrenome', '$email', '$celular')";
 
-/*$resultEE = mysqli_query($conx, $result_usuario);*/
+/*$resultEE = mysqli_query($conx, $result_usuario);
 
 
 
@@ -39,6 +39,8 @@ if($rowEE == 0) {
     header('Location: add.php'); 
 
 }
+
+*/
 
 
 
